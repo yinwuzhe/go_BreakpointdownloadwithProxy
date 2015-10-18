@@ -1,6 +1,10 @@
 # go_BreakpointdownloadwithProxy
 一个断点下载的程序，包括server端、代理端和客户端
 
+分别将server.go编译为server:go build server.go
+pull.go编译为pull:go build pull.go
+proxy.c编译为proxy:gcc -o proxy proxy.c
+
 
 先启动server proxy ，然后在能够启动的所有代理机器上运行proxy ，最后启动pull proxy 。可执行文件在Linux环境下运行，程序通过测试选择一个外网速度最快的代理(测试不需要消耗额外的流量)来下载文件。
 
